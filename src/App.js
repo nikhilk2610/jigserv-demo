@@ -5,7 +5,7 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="jigserv-demo/">
         <Home />
       </Router>
     </div>
