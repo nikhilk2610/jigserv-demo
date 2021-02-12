@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import CDropdown from "./dropdown/CatDropdown";
 import UniDropdown from "./dropdown/UniDropdown";
 import { Link } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
 
 export const NavItems = [
   {
@@ -110,7 +111,7 @@ function Navbar() {
             >
               Category <i className="fas fa-caret-down" />
             </Link>
-            {dropdown && <CDropdown />}
+              {dropdown && <CDropdown />}
           </li>
           <li
             className={uniDropdown ? "nav-item active-nav-item" : "nav-item"}

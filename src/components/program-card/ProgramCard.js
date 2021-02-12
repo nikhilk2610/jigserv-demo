@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Grid, Button, withStyles } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Button,
+  withStyles,
+  Checkbox,
+  FormGroup,
+  FormControlLabel,
+} from "@material-ui/core";
 import "./Programcard.scss";
 import moment from "moment";
 
@@ -41,6 +49,32 @@ function ProgramCard(props) {
               New
             </Box>
           )}
+          <Box
+            className="compare-checkbox"
+            position="absolute"
+            right={0}
+            top="2%"
+            component="span"
+            pl={2}
+            bgcolor="white"
+            color="black"
+            fontSize="14px"
+            mt={3}
+          >
+            <FormGroup row>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={props.checked}
+                    // onChange={handleChange}
+                    name="checked"
+                    color="primary"
+                  />
+                }
+                label="+ Compare"
+              />
+            </FormGroup>
+          </Box>
         </Box>
         <Box className="logo-img">
           <img src="https://download.logo.wine/logo/Massachusetts_Institute_of_Technology/Massachusetts_Institute_of_Technology-Logo.wine.png" />
@@ -89,9 +123,7 @@ function ProgramCard(props) {
           </ColorButton>
         </Box>
       </Box>
-      <Box>
-        
-      </Box>
+      <Box></Box>
     </Box>
   );
 }

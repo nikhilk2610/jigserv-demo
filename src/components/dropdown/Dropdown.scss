@@ -14,12 +14,26 @@
   list-style: none;
   text-align: start;
   z-index: 1200;
-  box-shadow: 0 14px 12px 0;
+  box-shadow: 0 6px 10px 0 gray;
+  animation: growDown 200ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  50% {
+      transform: scaleY(0.5)
+  }
+  100% {
+      transform: scaleY(1)
+  }
 }
 
 .university-dropdown {
   width: 550px;
-  max-height: 220px;
+  max-height: 225px;
   font-size: 0.9rem;
 }
 

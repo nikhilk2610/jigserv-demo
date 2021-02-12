@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box } from "@material-ui/core";
+import { Box, Fade } from "@material-ui/core";
 import "./Dropdown.scss";
 import { Categories } from "./../util-lists/UtilList";
 
@@ -26,15 +26,15 @@ function CDropdown() {
         {Categories.map((item) => {
           return (
             <Box
-              borderBottom="1px solid whitesmoke"
-              component="li"
-              key={item.id}
-              className="dropdown-link"
-              onClick={() => clickHandler(item.attr.name)}
-            >
-              <i className={item.attr.icon + " mr-2"}></i>
-              {item.attr.name} ({item.attr.programs_count})
-            </Box>
+            borderBottom="1px solid whitesmoke"
+            component="li"
+            key={item.id}
+            className="dropdown-link"
+            onClick={() => clickHandler(item.attr.name)}
+          >
+            <i className={item.attr.icon + " mr-2"}></i>
+            {item.attr.name} ({item.attr.programs_count})
+          </Box>
           );
         })}
       </ul>

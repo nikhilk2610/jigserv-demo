@@ -7,6 +7,7 @@ import { Categories, ProgramsList } from "../util-lists/UtilList";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgramCardSkeleton from "../program-card/ProgramCardSkeleton";
+import ProgramCompare from "../program-compare/ProgramCompare";
 
 const responsive = {
   superLargeDesktop: {
@@ -132,6 +133,11 @@ function ProgramsCategory() {
         >
           View All ({progCount} Programs)
         </Box>
+      </Box>
+      <Box>
+        <ProgramCompare
+          progList={[ProgramsList[0], ProgramsList[1], ProgramsList[2]]}
+        />
       </Box>
     </Box>
   );

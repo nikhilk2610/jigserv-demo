@@ -1,6 +1,39 @@
-@import '../../App.scss';
+@import "../../App.scss";
 
 .compare-box {
-    display: flex;
-    background-color: $primary-color;
+  background-color: $primary-color;
+  position: fixed;
+  bottom: 0;
+  z-index: 1100;
+  right: 3%;
+  max-width: 40%;
+}
+.but-group {
+  text-align: end;
+}
+.prog-box {
+  width: 160px !important;
+}
+.close-compare {
+  position: absolute;
+  top: -6px;
+  color: #4ab3cd;
+  right: -6px;
+  background: white;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 960px) {
+  .compare-box {
+    max-width: 100%;
+  }
+  .but-group {
+    text-align: center;
+  }
+  .prog-box {
+    width: 100% !important;
+  }
+  .close-compare {
+    left: 50%;
+  }
 }

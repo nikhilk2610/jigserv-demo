@@ -22,24 +22,15 @@ function ProgramCardSkeleton() {
         <Skeleton animation="wave" variant="rect" className={classes.media} />
         <CardContent className="text-center">
           <React.Fragment>
+            <Skeleton animation="wave" height={25} style={{ marginBottom: 8 }} width="100%" />
             <Skeleton
               animation="wave"
-              height={10}
+              height={20}
               style={{ marginBottom: 6 }}
+              width="40%"
+              className="m-auto"
             />
-            <Skeleton animation="wave" height={25} width="100%" />
-            <Skeleton
-              animation="wave"
-              height={10}
-              style={{ marginBottom: 6 }}
-            />
-            <Skeleton animation="wave" height={20} width="100%" />
-            <Skeleton
-              animation="wave"
-              height={10}
-              style={{ marginBottom: 6 }}
-            />
-            <Skeleton animation="wave" height={35} width="100%" />
+            <Skeleton animation="wave" style={{ marginBottom: 6 }} height={20} width="100%" />
             <Box display="flex" justifyContent="space-between">
               <Skeleton animation="wave" height={10} width="30%" />
               <Skeleton animation="wave" height={10} width="30%" />

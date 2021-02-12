@@ -43,6 +43,12 @@
     -webkit-line-clamp: 2;
 }
 
+.compare-checkbox ::ng-deep {
+    label{
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 960px) {
       .logo-img img {
         width: 80px;
