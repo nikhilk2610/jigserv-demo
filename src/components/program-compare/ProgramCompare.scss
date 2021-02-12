@@ -26,6 +26,7 @@
 @media screen and (max-width: 960px) {
   .compare-box {
     max-width: 100%;
+    right: 0;
   }
   .but-group {
     text-align: center;
@@ -34,6 +35,6 @@
     width: 100% !important;
   }
   .close-compare {
-    left: 50%;
+    right: 50%;
   }
 }

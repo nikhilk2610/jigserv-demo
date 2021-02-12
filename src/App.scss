@@ -18,3 +18,11 @@ label {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.program-name-2-line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  cursor: pointer;
+}

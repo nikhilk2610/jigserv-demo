@@ -8,6 +8,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgramCardSkeleton from "../program-card/ProgramCardSkeleton";
 import ProgramCompare from "../program-compare/ProgramCompare";
+import { MAX_SELECTION, ZERO_CONSTANT } from "../config/config";
 
 const responsive = {
   superLargeDesktop: {
@@ -42,10 +43,21 @@ function ProgramsCategory() {
   }, [progCount]);
 
   const [selectedProg, setSelectedProg] = useState([]);
-  const changeSelectedProg = (event) => {
-    setSelectedProg([...selectedProg, ProgramsList[event]]);
+  const removeProgram = () => {
+    setSelectedProg([]);
   };
 
+  const setSelection = (args, pk) => {
+    if (selectedProg.length < MAX_SELECTION || !args.target.checked) {
+      let index = selectedProg.indexOf(pk);
+      if (args.target.checked && index < ZERO_CONSTANT) {
+        setSelectedProg([...selectedProg, pk]);
+      } else {
+        let newarray = selectedProg.filter((obj) => obj != pk);
+        if (index >= ZERO_CONSTANT) setSelectedProg([...newarray]);
+      }
+    }
+  };
 
   return (
     <Box component="div" className="program-body" mb={3}>
@@ -76,6 +88,7 @@ function ProgramsCategory() {
                     {showSkl ? (
                       <ProgramCard
                         name={el.attr.name}
+                        pk={el.id}
                         applyBy={el.attr.apply_by}
                         startDate={el.attr.start_date}
                         endDate={el.attr.end_date}
@@ -83,6 +96,11 @@ function ProgramsCategory() {
                         isNew={el.attr.new}
                         universityName={el.attr.university_name}
                         programFee={el.attr.program_fee}
+                        compfunc={setSelection}
+                        selectedmap={
+                          selectedProg.indexOf(el.id) >= 0 ? true : false
+                        }
+                        data={selectedProg}
                       />
                     ) : (
                       <ProgramCardSkeleton />
@@ -109,6 +127,7 @@ function ProgramsCategory() {
                   {showSkl ? (
                     <ProgramCard
                       name={el.attr.name}
+                      pk={el.id}
                       applyBy={el.attr.apply_by}
                       startDate={el.attr.start_date}
                       endDate={el.attr.end_date}
@@ -116,6 +135,11 @@ function ProgramsCategory() {
                       isNew={el.attr.new}
                       universityName={el.attr.university_name}
                       programFee={el.attr.program_fee}
+                      compfunc={setSelection}
+                      selectedmap={
+                        selectedProg.indexOf(el.id) >= 0 ? true : false
+                      }
+                      data={selectedProg}
                     />
                   ) : (
                     <ProgramCardSkeleton />
@@ -141,9 +165,13 @@ function ProgramsCategory() {
         </Box>
       </Box>
       <Box>
-        <ProgramCompare
-          progList={[ProgramsList[0], ProgramsList[1], ProgramsList[2]]}
-        />
+        {selectedProg.length > 0 && (
+          <ProgramCompare
+            progList={selectedProg}
+            data={ProgramsList}
+            closePopup={removeProgram}
+          />
+        )}
       </Box>
     </Box>
   );

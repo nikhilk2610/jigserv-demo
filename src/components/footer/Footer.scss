@@ -1,12 +1,5 @@
 @import '../../App.scss';
 
-.program-name {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    cursor: pointer;
-}
 .program-name:hover {
     color: $primary-color;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Fade } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import "./Dropdown.scss";
 import { Categories } from "./../util-lists/UtilList";
 

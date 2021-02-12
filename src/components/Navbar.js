@@ -3,7 +3,6 @@ import "./Navbar.scss";
 import CDropdown from "./dropdown/CatDropdown";
 import UniDropdown from "./dropdown/UniDropdown";
 import { Link } from "react-router-dom";
-import Fade from 'react-reveal/Fade';
 
 export const NavItems = [
   {

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Grid,
@@ -10,6 +9,7 @@ import {
 } from "@material-ui/core";
 import "./Programcard.scss";
 import moment from "moment";
+import { MAX_SELECTION } from "../config/config";
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -65,10 +65,15 @@ function ProgramCard(props) {
               <FormControlLabel
                 control={
                   <Checkbox
-                    checked={props.checked}
-                    // onChange={handleChange}
+                    checked={props.selectedmap}
+                    onChange={(eve) => props.compfunc(eve, props.pk)}
                     name="checked"
                     color="primary"
+                    disabled={
+                      props.data?.length == MAX_SELECTION && !props.selectedmap
+                        ? true
+                        : false
+                    }
                   />
                 }
                 label="+ Compare"
@@ -97,7 +102,7 @@ function ProgramCard(props) {
             <i className="far fa-money-bill-alt mr-1"></i> {props.programFee}
           </div>
         </Box>
-        <Box className="program-name" component="h5" textAlign="center" mx={2}>
+        <Box className="program-name program-name-2-line" component="h5" textAlign="center" mx={2}>
           {props.name}{" "}
         </Box>
         <Box component="div" textAlign="center">

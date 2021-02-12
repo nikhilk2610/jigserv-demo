@@ -36,12 +36,6 @@
 .program-info {
     background-color: $primary-color;
 }
-.program-name {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-}
 
 .compare-checkbox ::ng-deep {
     label{

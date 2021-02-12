@@ -41,7 +41,7 @@ function ProgramComp() {
                                 component="span"
                                 fontSize="13px"
                                 pl={2}
-                                className="program-name"
+                                className="program-name-2-line"
                                 onClick={() =>
                                   alert(`${prog.attr.name} is clicked`)
                                 }
