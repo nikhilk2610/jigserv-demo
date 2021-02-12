@@ -1,0 +1,24 @@
+@import '../../App.scss';
+
+.program-name {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    cursor: pointer;
+}
+.program-name:hover {
+    color: $primary-color;
+}
+.footer-box {
+    background-color: #0d3347;
+}
+.footer-nav-link {
+    padding: 6px 9px;
+    color: white;
+}
+.footer-nav-link:hover {
+    background-color: white;
+    color: $primary-color;
+    border-radius: 3px;
+}

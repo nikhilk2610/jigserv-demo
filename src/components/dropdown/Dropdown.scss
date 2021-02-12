@@ -1,0 +1,71 @@
+@import "./../../App.scss";
+
+.category-dropdown {
+  width: 250px;
+  max-height: 400px;
+}
+
+.dropdown-menus {
+  background: white;
+  position: absolute;
+  top: 48px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  text-align: start;
+  z-index: 1200;
+  box-shadow: 0 14px 12px 0;
+}
+
+.university-dropdown {
+  width: 550px;
+  max-height: 220px;
+  font-size: 0.9rem;
+}
+
+.dropdown-menus li {
+  background: white;
+  color: #5c5c5c;
+  cursor: pointer;
+}
+
+.dropdown-menus li:hover {
+  color: $primary-color;
+  background: gainsboro;
+}
+
+.dropdown-menus.clicked {
+  display: none;
+}
+
+.dropdown-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px;
+}
+
+.uni-dropdown-link:hover {
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.other-uni {
+  max-height: 210px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 960px) {
+  .category-dropdown {
+    width: 100%;
+  }
+  
+  .university-dropdown {
+    width: 100%;
+    top: 102px;
+    max-height: 400px;
+  }
+}

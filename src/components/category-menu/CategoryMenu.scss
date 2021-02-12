@@ -1,0 +1,14 @@
+.menu-items {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+}
+
+@media screen and (max-width: 960px) {
+    .menu-items {
+        height: 200px;
+    }
+    .menu-box {
+        margin: 20px;
+    }
+}
