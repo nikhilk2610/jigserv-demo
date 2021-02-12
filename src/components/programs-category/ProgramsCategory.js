@@ -41,6 +41,12 @@ function ProgramsCategory() {
     setTimeout(() => setSkl(true), 1000);
   }, [progCount]);
 
+  const [selectedProg, setSelectedProg] = useState([]);
+  const changeSelectedProg = (event) => {
+    setSelectedProg([...selectedProg, ProgramsList[event]]);
+  };
+
+
   return (
     <Box component="div" className="program-body" mb={3}>
       <Box component="h3" fontWeight="bold">
