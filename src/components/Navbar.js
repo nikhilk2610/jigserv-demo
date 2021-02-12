@@ -8,26 +8,21 @@ export const NavItems = [
   {
     index: 1,
     title: "Course Recommendation",
-    path: "/course-recommendation",
-    cName: "dropdown-link",
+
   },
   {
     index: 2,
     title: "For Organisation",
-    path: "/organisation",
-    cName: "dropdown-link",
+
   },
   {
     index: 3,
     title: "Discussion forum",
-    path: "/forum",
-    cName: "dropdown-link",
+
   },
   {
     index: 4,
     title: "Blog",
-    path: "/blog",
-    cName: "dropdown-link",
   },
 ];
 
@@ -104,7 +99,7 @@ function Navbar() {
             onMouseLeave={onMouseLeave}
           >
             <Link
-              to="/category"
+              to="/"
               className={dropdown ? "nav-links active-nav-links" : "nav-links"}
               onClick={() => setDropdown(!dropdown)}
             >
@@ -118,7 +113,7 @@ function Navbar() {
             onMouseLeave={onUniMouseLeave}
           >
             <Link
-              to="/university"
+              to="/"
               className={
                 uniDropdown ? "nav-links active-nav-links" : "nav-links"
               }
@@ -132,7 +127,7 @@ function Navbar() {
             return (
               <li key={item.index} className="nav-item">
                 <Link
-                  to={item.path}
+                  to="/"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
