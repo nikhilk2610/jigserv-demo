@@ -43,7 +43,7 @@ function ProgramCard(props) {
               bgcolor="#e42525"
               color="white"
               fontWeight="bold"
-              fontSize="14px"
+              fontSize="12px"
               mt={3}
             >
               New
@@ -52,7 +52,7 @@ function ProgramCard(props) {
           <Box
             className="compare-checkbox"
             position="absolute"
-            right={0}
+            right="-14px"
             top="2%"
             component="span"
             pl={2}
