@@ -43,8 +43,14 @@ function ProgramsCategory() {
   }, [progCount]);
 
   const [selectedProg, setSelectedProg] = useState([]);
-  const removeProgram = () => {
-    setSelectedProg([]);
+  const removeProgram = (pk) => {
+    if (pk) {
+      let index = selectedProg.indexOf(pk);
+      if (index >= ZERO_CONSTANT) {
+        let newarray = selectedProg.filter((obj) => obj != pk);
+        setSelectedProg([...newarray]);
+      }
+    } else setSelectedProg([]);
   };
 
   const setSelection = (args, pk) => {
@@ -170,6 +176,7 @@ function ProgramsCategory() {
             progList={selectedProg}
             data={ProgramsList}
             closePopup={removeProgram}
+            removeSelectedProg={removeProgram}
           />
         )}
       </Box>

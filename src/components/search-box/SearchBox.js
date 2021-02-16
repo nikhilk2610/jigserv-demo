@@ -6,6 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { purple } from "@material-ui/core/colors";
 import Select from "react-select";
 import { Categories, Location } from "../util-lists/UtilList";
+import Fade from "react-reveal/Fade";
 
 const CatOptions = Categories.map((category) => {
   return {
@@ -37,7 +38,7 @@ const ColorButton = withStyles((theme) => ({
 const colourStyles = {
   control: (styles) => ({
     ...styles,
-    borderRadius: '0'
+    borderRadius: "0",
   }),
   input: (styles) => ({
     ...styles,
@@ -87,22 +88,24 @@ function SearchBox() {
             <Grid item xs={12} sm={9} className="input-box">
               <form className="search-input">
                 {advSearch && (
-                  <Box className="search-input">
-                    <Box>
-                      <Select
-                        placeholder="Category"
-                        styles={colourStyles}
-                        options={CatOptions}
-                      />
+                  <Fade right duration={100}>
+                    <Box className="search-input">
+                      <Box>
+                        <Select
+                          placeholder="Category"
+                          styles={colourStyles}
+                          options={CatOptions}
+                        />
+                      </Box>
+                      <Box className="sec-search">
+                        <Select
+                          placeholder="Location"
+                          styles={colourStyles}
+                          options={LocOptions}
+                        />
+                      </Box>
                     </Box>
-                    <Box className="sec-search">
-                      <Select
-                        placeholder="Location"
-                        styles={colourStyles}
-                        options={LocOptions}
-                      />
-                    </Box>
-                  </Box>
+                  </Fade>
                 )}
                 <input
                   placeholder="Search for Courses/Programs"

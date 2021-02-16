@@ -46,27 +46,44 @@
 }
 
 .first-text {
-  animation-duration: 5s;
+  animation-duration: 6s;
 }
 
 .second-text {
   animation-delay: 4s;
-  animation-duration: 6s;
+  animation-duration: 7s;
 }
 
 .third-text {
   animation-delay: 9s;
-  animation-duration: 6s;
+  animation-duration: 7s;
 }
 
 .fourth-text {
   animation-delay: 13s;
-  animation-duration: 6s;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
 }
 
 @media screen and (max-width: 960px) {
     .banner-text {
+      top: 70%;
         font-size: 1.2rem;
+      }
+      @keyframes fadeInOut {
+        0% {
+          top: 60%;
+          opacity: 0;
+        }
+      
+        50% {
+          top: 60%;
+          opacity: 1;
+        }
+      
+        75% {
+          top: 65%;
+          opacity: 0%;
+        }
       }
 }

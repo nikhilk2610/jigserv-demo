@@ -8,6 +8,9 @@ $primary-color: #051821;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
 }
 
 .navbars-logo {

@@ -6,7 +6,7 @@
   bottom: 0;
   z-index: 1100;
   right: 3%;
-  max-width: 40%;
+  max-width: 50%;
 }
 .but-group {
   text-align: end;
@@ -14,7 +14,7 @@
 .prog-box {
   width: 160px !important;
 }
-.close-compare {
+.toggle-compare {
   position: absolute;
   top: -6px;
   color: #4ab3cd;
@@ -22,10 +22,21 @@
   background: white;
   border-radius: 50%;
 }
+.close-but {
+  cursor: pointer;
+  color: $primary-color;
+  right: 2%;
+  top: 2%;
+}
+
+.program-list {
+  transition: all 1s ease-in-out;
+}
 
 @media screen and (max-width: 960px) {
   .compare-box {
     max-width: 100%;
+    width: 100%;
     right: 0;
   }
   .but-group {
@@ -34,7 +45,7 @@
   .prog-box {
     width: 100% !important;
   }
-  .close-compare {
+  .toggle-compare {
     right: 50%;
   }
 }

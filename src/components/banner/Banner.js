@@ -5,7 +5,7 @@ import "./Banner.scss";
 function Banner() {
   return (
     <div>
-      <Box>
+      <Box >
         <div className="position-relative">
           <Box className="banner">
             <img src="https://jigservdigital.com/ae7a9a6ec02604266cc8ec3dcb358036.png" />
